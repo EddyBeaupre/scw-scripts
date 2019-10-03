@@ -1,0 +1,13 @@
+[DEFAULT]
+#scwMetaData = /usr/local/bin/scw-metadata-json
+#nameServers = ns1.he.net ns2.he.net ns3.he.net ns4.he.net ns5.he.net
+
+[server1.domain.com]
+Key = <ddns update key>
+IPv4 = True
+IPv6 = True
+
+#[server2.domain.com]
+#Key = <ddns update key>
+#IPv4 = false
+#IPv6 = True
