@@ -1,7 +1,10 @@
 # scw-dns-he-net
 
 This script will update A or AAAA records on dns.he.net using the server's
-metadata.
+metadata. Update will only be send if the A or AAAA records differ from the
+IPv4 or IPv6 address reported by the server's metadata. DNS queries are by
+default made to he.net's nameservers to ensure that the most up to date
+record is being fetch and not scaleway's dns cache.
 
 # Configuration
 
@@ -35,3 +38,7 @@ IPv6 = True
 All other sections should be name exactly like the A or AAAA record you want
 to update. 'Key' must be set to your ddns update key, 'IPv4' must be set to
 true to update the A record and 'IPv6' to update the AAAA record.
+
+# Logging
+
+Logging is done with syslog entries.

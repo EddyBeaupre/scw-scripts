@@ -23,8 +23,6 @@ if not config.has_option('DEFAULT', 'scwMetaData'):
 else:
   syslog.syslog(syslog.LOG_INFO, 'Using custom ' + config['DEFAULT']['scwMetaData'] + " for server's metadata")
   
-exit(1)
-
 if not config.has_option('DEFAULT', 'nameServers'):
   syslog.syslog(syslog.LOG_INFO, 'Using default nameservers for valdation')
   config['DEFAULT']['nameServers']="ns1.he.net ns2.he.net ns3.he.net ns4.he.net ns5.he.net"
