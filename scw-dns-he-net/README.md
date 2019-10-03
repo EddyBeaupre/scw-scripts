@@ -42,3 +42,27 @@ true to update the A record and 'IPv6' to update the AAAA record.
 # Logging
 
 Logging is done with syslog entries.
+
+# Startup script
+
+Create a one-shot systemd unit named '/etc/systemd/system/scw-dns-he-net.service'
+
+```
+[Unit]
+Description=Update dns.he.net entries at startup
+
+[Service]
+ExecStart=/usr/local/bin/scw-dns-he-net
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Then run the following commands to activate the one-shot script at startup:
+
+```
+sudo systemctl daemon-reload
+sudo systemctl enable scw-dns-he-net.service
+```
