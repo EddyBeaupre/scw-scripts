@@ -16,8 +16,8 @@ pip install dnspython
 
 The configuration file must be copied to the /etc directory and with the
 same name as this script, but with the extension change to .conf (IE, if
-your script is renamed to 'fixmydns', the configuration file will be
-'/etc/fixmydns.conf')
+your script is renamed to `fixmydns`, the configuration file will be
+`/etc/fixmydns.conf`)
 
 The configuration file consist of the DEFAULT section, and various server
 definition sections.
@@ -42,8 +42,8 @@ IPv6 = True
 ```
 
 All other sections should be name exactly like the A or AAAA record you want
-to update. 'Key' must be set to your ddns update key, 'IPv4' must be set to
-true to update the A record and 'IPv6' to update the AAAA record.
+to update. `Key` must be set to your ddns update key, `IPv4` must be set to
+true to update the A record and `IPv6` to update the AAAA record.
 
 ## Logging
 
@@ -51,7 +51,7 @@ Logging is done with syslog entries.
 
 ## Startup script
 
-Create a one-shot systemd unit named '/etc/systemd/system/scw-dns-he-net.service'
+Create a one-shot systemd unit named `/etc/systemd/system/scw-dns-he-net.service`
 
 ```
 [Unit]
