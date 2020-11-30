@@ -36,11 +36,11 @@ def getNameServers():
   nameServer = []
   syslog.syslog(syslog.LOG_INFO, 'Parsing nameservers list')
   for ns in config['DEFAULT']['nameServers'].split():
-    answers = dns.resolver.query(ns, 'A')
+    answers = dns.resolver.resolve(ns, 'A')
     for rdata in answers:
       syslog.syslog(syslog.LOG_INFO, 'NameServer ' + ns + ' IPv4 address: ' + rdata.address)
       nameServer.append(rdata.address)
-    answers = dns.resolver.query(ns, 'AAAA')
+    answers = dns.resolver.resolve(ns, 'AAAA')
     for rdata in answers:
       syslog.syslog(syslog.LOG_INFO, 'NameServer ' + ns + ' IPv6 address: ' + rdata.address)
       nameServer.append(rdata.address)
@@ -55,7 +55,7 @@ def dnsResolver( dnsServer, dnsName, dnsType ):
     syslog.syslog(syslog.LOG_INFO, 'Initializing resolver')
     resolver = dns.resolver.Resolver(configure=False)
     resolver.nameservers = dnsServer
-    answers = resolver.query(dnsName, dnsType)
+    answers = resolver.resolve(dnsName, dnsType)
     for rdata in answers:
       syslog.syslog(syslog.LOG_INFO, dnsName + ' (' + dnsType + ") resolve to " + rdata.address)
       dnsAnswer.append(rdata.address)
