@@ -1,0 +1,10 @@
+[Unit]
+Description=Update dns.he.net entries at startup
+
+[Service]
+ExecStart=/usr/local/bin/scw-dns-he-net
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

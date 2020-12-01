@@ -1,0 +1,4 @@
+# /etc/cron.d/scw-dns-he-net
+
+# Check for ip changes... Shoudn't change but...
+*/5	*	*	*	*	root	/usr/local/bin/scw-dns-he-net
