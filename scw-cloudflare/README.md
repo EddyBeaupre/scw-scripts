@@ -29,8 +29,8 @@ apitoken="XXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 Name       |Description
 -----------|--------------------------------------------------------------------------------
-scwMetaData|Optional specify the location of the scw-metadata-json script.
-apitoken|Mandatory API key, must have `Zone.DNS` permission on the zones you want to update.
+scwMetaData|Optional - specify the location of the scw-metadata-json script.
+apitoken|Mandatory - API key, must have `Zone.DNS` permission on the zones you want to update.
 
 ```
 [server1.domain.com]
