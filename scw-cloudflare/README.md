@@ -1,4 +1,4 @@
-# scw-dns-he-net
+# scw-cloudflare
 
 This script will update or create A or AAAA records on cloudflare using the
 server's metadata. Update will only be send if the A or AAAA records differ
