@@ -27,11 +27,10 @@ scwMetaData = /usr/local/bin/scw-metadata-json
 apitoken="XXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 ```
 
-scwMetaData - Optional
-              specify the location of the scw-metadata-json script.
-apitoken    - Mendatory
-              API key, must have `Zone.DNS` permission on the zones
-              you want to update.
+Name       |Description
+-----------|--------------------------------------------------------------------------------
+scwMetaData|Optional specify the location of the scw-metadata-json script.
+apitoken|Mandatory API key, must have `Zone.DNS` permission on the zones you want to update.
 
 ```
 [server1.domain.com]
