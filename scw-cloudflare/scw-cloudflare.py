@@ -175,11 +175,6 @@ def main(ArgParser):
         if scriptConfig.HasOption('DEFAULT', 'apitoken'):
             for item, data in scriptConfig.GetItems():
                 if item != 'DEFAULT':
-                    print("ipv4: " + str(scriptConfig.GetBoolean(item, 'ipv4')))
-                    print("ipv6: " + str(scriptConfig.GetBoolean(item, 'ipv6')))
-                    print("proxied: " + str(scriptConfig.GetBooleanNone(item, 'proxied')))
-                    if scriptConfig.GetBooleanNone(item, 'proxied') == None:
-                        print("Keep proxy settings")
                     if scriptConfig.GetBoolean(item, 'ipv4'):
                         updateRecord(item, ipv4, scriptConfig.GetBooleanNone(item, 'proxied'), scriptConfig.GetToken())
                     if scriptConfig.GetBoolean(item, 'ipv6'):
