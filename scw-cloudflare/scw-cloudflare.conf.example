@@ -1,0 +1,11 @@
+[DEFAULT]
+#scwMetaData = /usr/local/bin/scw-metadata-json
+apitoken="XXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
+[dns.record]
+# ipv4: True to update, anything else to ignore
+ipv4 = True
+# ipv6: True to update, anything else to ignore
+ipv6 = True
+# proxied: True to proxy, false to use DNS, anything else to keep as is.
+proxied = keep

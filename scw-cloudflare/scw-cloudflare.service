@@ -1,0 +1,10 @@
+[Unit]
+Description=Update cloudflare entries at startup
+
+[Service]
+ExecStart=/usr/local/bin/scw-cloudflare
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

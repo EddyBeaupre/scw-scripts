@@ -1,0 +1,4 @@
+# /etc/cron.d/scw-cloudflare
+
+# Check for ip changes... Shoudn't change but...
+*/5	*	*	*	*	root	/usr/local/bin/scw-cloudflare
